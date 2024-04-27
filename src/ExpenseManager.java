@@ -1,34 +1,33 @@
-// This class manages a list of Expense objects and includes methods to add,
-// list, and summarize expenses, as well as to validate inputs and handle file data.
-import java.io.;
-import java.util.;
-
-public class ExpenseManager extends Expense {
-    private List<Expense> expenses;
-
-
-    public ExpenseManager(double amount, String category) {
-        super(amount, category);
-        this.expenses = new ArrayList<>(); {
-        this.expenses = new ArrayList<>();
-    }
+import java.io.*;
+import java.util.*;
+public class ExpenseManager {
+private List<Expense> expenses;
+private File file;
+public ExpenseManager(String file) {
+this.expenses = new ArrayList<>();
+this.file = new File(file);
+loadExpenses();
 }
-
-    public void addExpense(Expense expense) {
-        expenses.add(expense);
-    }
-
-    public List<Expense> getExpenses() {
-        return expenses;
-    }
-
-    public double summarizeExpensesByCategory(String category) {
-        double total = 0;
-        for (Expense expense : expenses) {
-            if (expense.getCategory().equals(category)) {
-                total += expense.getAmount();
-            }
-        }
-        return total;
-    }
+public void addExpense(double amount, String category) {
+validateInputData(amount, category);
+expenses.add(new Expense(amount, category));
+System.out.println("Se han agregado correctamente los gastos.");
+}
+public void listExpenses() {
+for (Expense expense : expenses) {
+System.out.println("Monto: $" + expense.getAmount() + ", Categoría: "
++ expense.getCategory());
+}
+}
+public void sumCategories(String category) {
+valideInputData(category);
+double sumq=0;
+for(Expense expense : expenses) {
+String ctg = expense.getCategory();
+double amt = expense.getAmount();
+if(ctg.equals(category))
+sumq+=amt;
+}
+System.out.println("Total de gastos en la categoría " + category + " : $" +
+sumq);
 }

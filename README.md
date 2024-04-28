@@ -1,18 +1,20 @@
-## Getting Started
+## Welcome to the Expense Management Application
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+This is an interactive tool that allows you to manage your expenses in a simple and efficient way. Upon running the application, a terminal will open where you can choose from the following options:
 
-## Folder Structure
+## Options
 
-The workspace contains two folders by default, where:
+1. Add Expenses: Enter details of new expenses, specifying the amount and category.
+2. List Expenses: Display all registered expenses.
+3. Summarize Expenses by Category: Obtain a sum of expenses for a specific category.
+4. Save Expenses: Save the current state of expenses to a file.
+5. Load Expenses: Load saved expenses when starting the application.
+6. Exit the system: Close the application.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## Usage
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+Run the application and select an option by entering the corresponding number. Follow the on-screen instructions to complete the selected action. Repeat the process until you wish to exit the system.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+## Notes
 
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+The application uses a save file to store expenses. Be sure to save your expenses regularly to avoid data loss. The application does not require any additional configuration. Simply run it and start managing your expenses.
